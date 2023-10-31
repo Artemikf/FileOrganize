@@ -27,8 +27,7 @@
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="img\CollapseNone.png"/>
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCollapse}"
-                                             Value="True">
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCollapse}" Value="True">
                                     <Setter Property="Source" Value="img\CollapseAct.png"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -43,8 +42,7 @@
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="img\CrossNone.png"/>
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCross}"
-                                             Value="True">
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCross}" Value="True">
                                     <Setter Property="Source" Value="img\CrossAct.png"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -62,14 +60,29 @@
                 <ColumnDefinition Width="190"/>
                 <ColumnDefinition Width="770"/>
             </Grid.ColumnDefinitions>
+
+            <Grid x:Name="Left" Grid.Column="0">
+                <StackPanel>
+                    <Polygon Fill="White" Opacity="0.2" 
+                             Points="15,15,
+                             15,465,
+                             175,465,
+                             175,15"
+                    />
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="Right" Grid.Column="1">
+                
+            </Grid>
             
+        </Grid>
+
+        <Grid x:Name="FAQ" Grid.Row="2">
             
         </Grid>
         
-
-
-
-
+        
     </Grid>
     
 </Window>
