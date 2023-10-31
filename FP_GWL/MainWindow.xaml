@@ -1,0 +1,73 @@
+﻿<Window x:Class="FP_GWL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FP_GWL"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="540" Width="960" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <LinearGradientBrush Opacity="1" StartPoint="1,0" EndPoint="0,1" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad">
+            <GradientStop Color="#191714" Offset="0.15"/>
+            <GradientStop Color="#360940" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="480"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        
+        <Grid x:Name="Toolbar" Grid.Row="0" MouseDown="Toolbar_MouseDown" Background="Transparent">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Image Name="btnCollapse" Height="15" Width="15"  Margin="0,0,15,0" MouseDown="btnCollapse_MouseDown">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="img\CollapseNone.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCollapse}"
+                                             Value="True">
+                                    <Setter Property="Source" Value="img\CollapseAct.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                    <Image.Effect>
+                        <BlurEffect Radius="1"/>
+                    </Image.Effect>
+                </Image>
+                <Image Name="btnCross" Height="15" Width="15"  Margin="0,0,15,0" MouseDown="btnCross_MouseDown">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="Source" Value="img\CrossNone.png"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCross}"
+                                             Value="True">
+                                    <Setter Property="Source" Value="img\CrossAct.png"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                    <Image.Effect>
+                        <BlurEffect Radius="1"/>
+                    </Image.Effect>
+                </Image>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="Main" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="660"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        
+        
+        
+        
+        
+    </Grid>
+    
+</Window>
