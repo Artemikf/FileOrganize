@@ -13,6 +13,20 @@
         </LinearGradientBrush>
     </Window.Background>
 
+    <Window.Resources>
+        <Style x:Key="settVis" TargetType="ListView">
+            <Setter Property="Foreground" Value="white" />
+            <Setter Property="FontSize" Value="16.5" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Background" Value="Transparent" />
+
+        </Style>
+
+    </Window.Resources>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -69,9 +83,40 @@
                 <TextBlock Text="Archiver" Foreground="White" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,95,0,0" />
                 <TextBlock Text="Encoder / Decoder" Foreground="White" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,120,0,0" />
                 <TextBlock Text="Groupper" Foreground="White" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0" />-->
-                
-                
-                
+
+                <ListView Style="{StaticResource settVis}" Opacity="1" Margin="15">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListViewItem">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="Transparent" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+
+                    <TextBlock>Выберете пункт</TextBlock>
+                    <TextBlock Foreground="Beige">действия из</TextBlock>
+                    <TextBlock Foreground="Beige">доступных: </TextBlock>
+                    <ListBoxItem>Cleaner</ListBoxItem>
+                    <ListBoxItem>Renamer</ListBoxItem>
+                    <ListBoxItem>Archiver</ListBoxItem>
+                    <ListBoxItem>Encoder/Decoder</ListBoxItem>
+                    <ListBoxItem>Groupper</ListBoxItem>
+                </ListView>
+
             </Grid>
 
             <Grid x:Name="Right" Grid.Column="1">
