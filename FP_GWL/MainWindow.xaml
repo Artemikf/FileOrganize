@@ -19,7 +19,7 @@
             <RowDefinition Height="480"/>
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
-        
+
         <Grid x:Name="Toolbar" Grid.Row="0" MouseDown="Toolbar_MouseDown" Background="Transparent">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Image Name="btnCollapse" Height="15" Width="15"  Margin="0,0,15,0" MouseDown="btnCollapse_MouseDown">
@@ -62,27 +62,29 @@
             </Grid.ColumnDefinitions>
 
             <Grid x:Name="Left" Grid.Column="0">
-                <StackPanel>
-                    <Polygon Fill="White" Opacity="0.2" 
-                             Points="15,15,
-                             15,465,
-                             175,465,
-                             175,15"
-                    />
-                </StackPanel>
+                <Polygon Fill="White" Opacity="0.2" Points="15, 15, 15, 465, 175, 465, 175, 15" />
+                <!--<TextBlock Text="Варианты действий:" Foreground="White" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,20,0,0" />
+                <TextBlock Text="Cleaner" Foreground="White" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,45,0,0" />
+                <TextBlock Text="Renamer" Foreground="White" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,70,0,0" />
+                <TextBlock Text="Archiver" Foreground="White" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,95,0,0" />
+                <TextBlock Text="Encoder / Decoder" Foreground="White" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,120,0,0" />
+                <TextBlock Text="Groupper" Foreground="White" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,145,0,0" />-->
+                
+                
+                
             </Grid>
 
             <Grid x:Name="Right" Grid.Column="1">
-                
+
             </Grid>
-            
+
         </Grid>
 
         <Grid x:Name="FAQ" Grid.Row="2">
-            
+
         </Grid>
-        
-        
+
+
     </Grid>
-    
+
 </Window>
