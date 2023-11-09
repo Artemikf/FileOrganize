@@ -106,9 +106,9 @@
                     </ListView.ItemContainerStyle>
 
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="top" Margin="0, 50">
-                        <TextBlock Text="Выберете пункт" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Foreground="Beige" Text="действия из" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                        <TextBlock Foreground="Beige" Text="доступных:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Foreground="PaleTurquoise" Text="Выберете пункт" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Foreground="PaleTurquoise" Text="действия из" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Foreground="PaleTurquoise" Text="доступных:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </StackPanel>
                     <ListBoxItem Style="{StaticResource settLI}">Cleaner</ListBoxItem>
                     <ListBoxItem Style="{StaticResource settLI}">Renamer</ListBoxItem>
