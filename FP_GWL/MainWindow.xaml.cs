@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
 
 namespace FP_GWL
 {
@@ -34,10 +35,13 @@ namespace FP_GWL
 
         private void Toolbar_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            if(e.ChangedButton is MouseButton.Left)
+            if (e.ChangedButton is MouseButton.Left)
             {
                 this.DragMove();
             }
         }
+
+
+
     }
 }

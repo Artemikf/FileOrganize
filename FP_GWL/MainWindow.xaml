@@ -19,7 +19,7 @@
             <RowDefinition Height="480"/>
             <RowDefinition Height="35"/>
         </Grid.RowDefinitions>
-        
+
         <Grid x:Name="Toolbar" Grid.Row="0" MouseDown="Toolbar_MouseDown" Background="Transparent">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <Image Name="btnCollapse" Height="15" Width="15"  Margin="0,0,15,0" MouseDown="btnCollapse_MouseDown">
@@ -27,8 +27,7 @@
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="img\CollapseNone.png"/>
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCollapse}"
-                                             Value="True">
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCollapse}" Value="True">
                                     <Setter Property="Source" Value="img\CollapseAct.png"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -43,8 +42,7 @@
                         <Style TargetType="{x:Type Image}">
                             <Setter Property="Source" Value="img\CrossNone.png"/>
                             <Style.Triggers>
-                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCross}"
-                                             Value="True">
+                                <DataTrigger Binding="{Binding IsMouseOver, ElementName=btnCross}" Value="True">
                                     <Setter Property="Source" Value="img\CrossAct.png"/>
                                 </DataTrigger>
                             </Style.Triggers>
@@ -59,15 +57,61 @@
 
         <Grid x:Name="Main" Grid.Row="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300"/>
-                <ColumnDefinition Width="660"/>
+                <ColumnDefinition Width="190"/>
+                <ColumnDefinition Width="770"/>
             </Grid.ColumnDefinitions>
+
+            <Grid x:Name="Left" Grid.Column="0">
+                <Polygon Fill="White" Opacity="0.2" Points="15, 15, 15, 465, 175, 465, 175, 15" />
+                
+                <ListView Style="{StaticResource settVis}" Opacity="1" Margin="15">
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                            <Setter Property="Padding" Value="0"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListViewItem">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter />
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="Transparent" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="top" Margin="0, 50">
+                        <TextBlock Text="Выберете пункт" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Foreground="Beige" Text="действия из" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Foreground="Beige" Text="доступных:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <ListBoxItem Style="{StaticResource settLI}">Cleaner</ListBoxItem>
+                    <ListBoxItem Style="{StaticResource settLI}">Renamer</ListBoxItem>
+                    <ListBoxItem Style="{StaticResource settLI}">Archiver</ListBoxItem>
+                    <ListBoxItem Style="{StaticResource settLI}">Encoder/Decoder</ListBoxItem>
+                    <ListBoxItem Style="{StaticResource settLI}">Groupper</ListBoxItem>
+                </ListView>
+
+            </Grid>
+
+            <Grid x:Name="Right" Grid.Column="1">
+
+            </Grid>
+
         </Grid>
-        
-        
-        
-        
-        
+
+        <Grid x:Name="FAQ" Grid.Row="2">
+
+        </Grid>
+
+
     </Grid>
-    
+
 </Window>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\App.xaml
-11407045341
+3-679776070
 
 5518434038
 198-306949569
-MainWindow.xaml;
+MainWindow.xaml;resources\ListBoxItemStyles.xaml;resources\ListViewStyles.xaml;
 
-True
+False
 
