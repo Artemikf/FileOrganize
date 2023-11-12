@@ -4,6 +4,11 @@
              xmlns:local="clr-namespace:FP_GWL"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="resources/ListBoxItemStyles.xaml" />
+                <ResourceDictionary Source="resources/ListViewStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>         
     </Application.Resources>
 </Application>

@@ -8,24 +8,19 @@
     "net7.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\artem\\.nuget\\packages\\": {},
-    "D:\\Visual Studio\\Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Artem\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#\\WPF\\Final_project\\fp\\FP_GWL\\FP_GWL.csproj",
+      "projectUniqueName": "D:\\Programming\\C#\\WPF\\Final_project\\fp\\FP_GWL\\FP_GWL.csproj",
       "projectName": "FP_GWL",
-      "projectPath": "D:\\C#\\WPF\\Final_project\\fp\\FP_GWL\\FP_GWL.csproj",
-      "packagesPath": "C:\\Users\\artem\\.nuget\\packages\\",
-      "outputPath": "D:\\C#\\WPF\\Final_project\\fp\\FP_GWL\\obj\\",
+      "projectPath": "D:\\Programming\\C#\\WPF\\Final_project\\fp\\FP_GWL\\FP_GWL.csproj",
+      "packagesPath": "C:\\Users\\Artem\\.nuget\\packages\\",
+      "outputPath": "D:\\Programming\\C#\\WPF\\Final_project\\fp\\FP_GWL\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Visual Studio\\Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\artem\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Artem\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -69,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

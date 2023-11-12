@@ -13,24 +13,6 @@
         </LinearGradientBrush>
     </Window.Background>
 
-    <Window.Resources>
-        <Style x:Key="settVis" TargetType="ListView">
-            <Setter Property="Foreground" Value="white" />
-            <Setter Property="FontSize" Value="18" />
-            <Setter Property="FontWeight" Value="Bold" />
-            <Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="VerticalAlignment" Value="Top" />
-            <Setter Property="BorderThickness" Value="0" />
-            <Setter Property="Background" Value="Transparent" />
-        </Style>
-        
-        <Style x:Key="settLI" TargetType="ListBoxItem">
-            <Setter Property="HorizontalAlignment" Value="Center"/>
-            <Setter Property="VerticalAlignment" Value="Center"/>
-        </Style>
-
-    </Window.Resources>
-    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
