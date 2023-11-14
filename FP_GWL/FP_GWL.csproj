@@ -12,6 +12,8 @@
     <None Remove="img\CollapseNone.png" />
     <None Remove="img\CrossAct.png" />
     <None Remove="img\CrossNone.png" />
+    <None Remove="img\Github.png" />
+    <None Remove="img\Instagram.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +27,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\CrossNone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Github.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\Instagram.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

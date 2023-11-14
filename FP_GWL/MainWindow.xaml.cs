@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+
 
 namespace FP_GWL
 {
@@ -27,12 +29,10 @@ namespace FP_GWL
         {
             this.Close();
         }
-
         private void btnCollapse_MouseDown(object sender, MouseButtonEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
         }
-
         private void Toolbar_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton is MouseButton.Left)
@@ -40,8 +40,44 @@ namespace FP_GWL
                 this.DragMove();
             }
         }
+        private void btnGitProf_Click(object sender, RoutedEventArgs e)
+        {
+            string url = "https://github.com/Artemikf";
 
+            try
+            {
+                System.Diagnostics.Process.Start("cmd", $"/c start {url}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при открытии ссылки: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        private void btnInst_Click(object sender, RoutedEventArgs e)
+        {
+            string url = "https://www.instagram.com/tema_3345/";
 
+            try
+            {
+                System.Diagnostics.Process.Start("cmd", $"/c start {url}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при открытии ссылки: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        private void btnGitProj_Click(object sender, RoutedEventArgs e)
+        {
+            string url = "https://github.com/Artemikf/FileOrganize";
 
+            try
+            {
+                System.Diagnostics.Process.Start("cmd", $"/c start {url}");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при открытии ссылки: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }

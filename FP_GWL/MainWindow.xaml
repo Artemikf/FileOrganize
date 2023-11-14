@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FP_GWL"
         mc:Ignorable="d"
-        Title="MainWindow" Height="540" Width="960" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" Height="555" Width="960" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Background>
         <LinearGradientBrush Opacity="1" StartPoint="1,0" EndPoint="0,1" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad">
             <GradientStop Color="#191714" Offset="0.15"/>
@@ -17,7 +17,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
             <RowDefinition Height="480"/>
-            <RowDefinition Height="35"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
         <Grid x:Name="Toolbar" Grid.Row="0" MouseDown="Toolbar_MouseDown" Background="Transparent">
@@ -63,29 +63,8 @@
 
             <Grid x:Name="Left" Grid.Column="0">
                 <Polygon Fill="White" Opacity="0.2" Points="15, 15, 15, 465, 175, 465, 175, 15" />
-                
+
                 <ListView Style="{StaticResource settVis}" Opacity="1" Margin="15">
-                    <ListView.ItemContainerStyle>
-                        <Style TargetType="ListViewItem">
-                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
-                            <Setter Property="Padding" Value="0"/>
-                            <Setter Property="BorderThickness" Value="0"/>
-                            <Setter Property="Template">
-                                <Setter.Value>
-                                    <ControlTemplate TargetType="ListViewItem">
-                                        <Border Background="{TemplateBinding Background}">
-                                            <ContentPresenter />
-                                        </Border>
-                                    </ControlTemplate>
-                                </Setter.Value>
-                            </Setter>
-                            <Style.Triggers>
-                                <Trigger Property="IsMouseOver" Value="True">
-                                    <Setter Property="Background" Value="Transparent" />
-                                </Trigger>
-                            </Style.Triggers>
-                        </Style>
-                    </ListView.ItemContainerStyle>
 
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="top" Margin="0, 50">
                         <TextBlock Text="Выберете пункт" HorizontalAlignment="Center" VerticalAlignment="Center"/>
@@ -114,14 +93,31 @@
                 <ColumnDefinition Width = "*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="0" VerticalAlignment = "Top" HorizontalAlignment = "Right" Style="{StaticResource settBtn}">
-                GitHub
+            <Button x:Name="btnGitProf" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" 
+                Style="{StaticResource settBtn}" Margin="0, 0, 20, 10" Click="btnGitProf_Click"
+            >
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="15" Width="15" Source="img\Github.png"/>
+                    <Label Content="GitHub Profile" Foreground="White"/>
+                </StackPanel>
             </Button>
-            <Button Grid.Column="1" VerticalAlignment = "Top" HorizontalAlignment = "Center" Style="{StaticResource settBtn}">
-                Instagram
+
+            <Button x:Name="btnInst" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" 
+                Style="{StaticResource settBtn}" Margin="0, 0, 0, 10" Click="btnInst_Click"
+            >
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="15" Width="15" Source="img\Instagram.png"/>
+                    <Label Content="Instagram" Foreground="White"/>
+                </StackPanel>
             </Button>
-            <Button Grid.Column="2" VerticalAlignment = "Top" HorizontalAlignment = "Left" Style="{StaticResource settBtn}">
-                GitHub
+
+            <Button x:Name="btnGitProj" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" 
+                Style="{StaticResource settBtn}" Margin="20, 0, 0, 10" Click="btnGitProj_Click"
+            >
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="15" Width="15" Source="img\Github.png"/>
+                    <Label Content="GitHub Project" Foreground="White"/>
+                </StackPanel>
             </Button>
             
         </Grid>
