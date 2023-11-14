@@ -108,7 +108,22 @@
         </Grid>
 
         <Grid x:Name="FAQ" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width = "*"/>
+                <ColumnDefinition Width = "*"/>
+                <ColumnDefinition Width = "*"/>
+            </Grid.ColumnDefinitions>
 
+            <Button Grid.Column="0" VerticalAlignment = "Top" HorizontalAlignment = "Right" Style="{StaticResource settBtn}">
+                GitHub
+            </Button>
+            <Button Grid.Column="1" VerticalAlignment = "Top" HorizontalAlignment = "Center" Style="{StaticResource settBtn}">
+                Instagram
+            </Button>
+            <Button Grid.Column="2" VerticalAlignment = "Top" HorizontalAlignment = "Left" Style="{StaticResource settBtn}">
+                GitHub
+            </Button>
+            
         </Grid>
 
 

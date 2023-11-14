@@ -10,6 +10,9 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="resources\ButtonStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="resources\ListBoxItemStyles.xaml">
       <SubType>Designer</SubType>
     </Page>

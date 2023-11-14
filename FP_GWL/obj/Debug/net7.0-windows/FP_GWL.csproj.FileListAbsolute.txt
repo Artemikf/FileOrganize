@@ -42,3 +42,4 @@ D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\ref\FP_GW
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\resources\ListBoxItemStyles.baml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\resources\ListViewStyles.baml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\App.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\resources\ButtonStyles.baml
