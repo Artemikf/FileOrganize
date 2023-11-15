@@ -94,7 +94,7 @@
             </Grid.ColumnDefinitions>
 
             <Button x:Name="btnGitProf" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Right" 
-                Style="{StaticResource settBtn}" Margin="0, 0, 20, 10" Click="btnGitProf_Click"
+                Style="{StaticResource settBtn}" Margin="0, 0, 20, 10" Click="btnOpenBrows_Click"
             >
                 <StackPanel Orientation="Horizontal">
                     <Image Height="15" Width="15" Source="img\Github.png"/>
@@ -103,7 +103,7 @@
             </Button>
 
             <Button x:Name="btnInst" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" 
-                Style="{StaticResource settBtn}" Margin="0, 0, 0, 10" Click="btnInst_Click"
+                Style="{StaticResource settBtn}" Margin="0, 0, 0, 10" Click="btnOpenBrows_Click"
             >
                 <StackPanel Orientation="Horizontal">
                     <Image Height="15" Width="15" Source="img\Instagram.png"/>
@@ -112,7 +112,7 @@
             </Button>
 
             <Button x:Name="btnGitProj" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" 
-                Style="{StaticResource settBtn}" Margin="20, 0, 0, 10" Click="btnGitProj_Click"
+                Style="{StaticResource settBtn}" Margin="20, 0, 0, 10" Click="btnOpenBrows_Click"
             >
                 <StackPanel Orientation="Horizontal">
                     <Image Height="15" Width="15" Source="img\Github.png"/>

@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-
+using System.Security.Cryptography;
 
 namespace FP_GWL
 {
@@ -40,36 +40,27 @@ namespace FP_GWL
                 this.DragMove();
             }
         }
-        private void btnGitProf_Click(object sender, RoutedEventArgs e)
+        private void btnOpenBrows_Click(object sender, RoutedEventArgs e)
         {
-            string url = "https://github.com/Artemikf";
+            Button clickedButton = (Button)sender;
 
-            try
+            switch (clickedButton.Name)
             {
-                System.Diagnostics.Process.Start("cmd", $"/c start {url}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при открытии ссылки: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                case "btnGitProf":
+                    OpenLinkBrows("https://github.com/Artemikf");
+                    break;
+                case "btnInst":
+                    OpenLinkBrows("https://www.instagram.com/tema_3345/");
+                    break;
+                case "btnGitProj":
+                    OpenLinkBrows("https://github.com/Artemikf/FileOrganize");
+                    break;
+                default:
+                    break;
             }
         }
-        private void btnInst_Click(object sender, RoutedEventArgs e)
+        private void OpenLinkBrows(string url)
         {
-            string url = "https://www.instagram.com/tema_3345/";
-
-            try
-            {
-                System.Diagnostics.Process.Start("cmd", $"/c start {url}");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при открытии ссылки: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-        }
-        private void btnGitProj_Click(object sender, RoutedEventArgs e)
-        {
-            string url = "https://github.com/Artemikf/FileOrganize";
-
             try
             {
                 System.Diagnostics.Process.Start("cmd", $"/c start {url}");
