@@ -14,8 +14,9 @@
     <None Remove="img\CrossNone.png" />
     <None Remove="img\Github.png" />
     <None Remove="img\Instagram.png" />
+    <None Remove="libraries\Gwl.dll" />
   </ItemGroup>
-
+    
   <ItemGroup>
     <Resource Include="img\CollapseNone.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -35,6 +36,21 @@
     <Resource Include="img\Instagram.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="libraries\Gwl.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Gwl">
+      <HintPath>libraries\Gwl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Common">
+      <HintPath>C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\7.0.13\ref\net7.0\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\7.0.13\ref\net7.0\System.Windows.Forms.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

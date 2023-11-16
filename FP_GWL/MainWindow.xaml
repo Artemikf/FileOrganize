@@ -81,7 +81,9 @@
             </Grid>
 
             <Grid x:Name="Right" Grid.Column="1">
-
+                <Button Style="{StaticResource settBtn}" Height="200" Width="200" Background="red" Click="openDirectory_Click"/>
+                <TextBox x:Name="t1" Width="300" Height="25" Margin="235,381,235,49" IsReadOnly="True"/>
+                
             </Grid>
 
         </Grid>

@@ -15,15 +15,48 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Security.Cryptography;
+using Gwl.Search;
 
 namespace FP_GWL
 {
     public partial class MainWindow : Window
     {
+        private System.Windows.Forms.FolderBrowserDialog fbd;
+        private Finder finder;
+        private readonly string[] fileMasks =
+        {
+            "*.jpg",
+            "*.jpeg",
+            "*.png",
+            "*.gif"
+        };
+
+
+
         public MainWindow()
         {
             InitializeComponent();
+
+            fbd = new System.Windows.Forms.FolderBrowserDialog();
+
+            finder = new Finder(Finder.AnalyzerStrategy.RegexStrategy);
         }
+
+        private void openDirectory_Click(object sender, RoutedEventArgs e)
+        {
+            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                //MessageBox.Show(fbd.SelectedPath);
+                t1.Text = fbd.SelectedPath;
+                finder.FindFilesByMask(fbd.SelectedPath, fileMasks);
+            }
+
+        }
+
+
+
+
+
 
         private void btnCross_MouseDown(object sender, MouseButtonEventArgs e)
         {
