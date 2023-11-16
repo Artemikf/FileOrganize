@@ -52,3 +52,13 @@ D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\System.Wi
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\System.Windows.Forms.Primitives.xml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL.csproj.CopyComplete
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\Gwl.dll
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Cleaner.g.cs
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Renamer.g.cs
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Cleaner.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Renamer.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Archiver.g.cs
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Encoder.g.cs
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Groupper.g.cs
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Archiver.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Encoder.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Groupper.baml

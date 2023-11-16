@@ -7,6 +7,23 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="UserControls\Archiver.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\Cleaner.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\Encoder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\Groupper.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\Renamer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -17,6 +34,21 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="resources\ListViewStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\Archiver.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\Cleaner.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\Encoder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\Groupper.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\Renamer.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

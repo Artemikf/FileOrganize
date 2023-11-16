@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\App.xaml
-4985922893
+9-603003832
 
-5518434038
+10-861761252
 201-71285204
-MainWindow.xaml;resources\ButtonStyles.xaml;resources\ListBoxItemStyles.xaml;resources\ListViewStyles.xaml;
+MainWindow.xaml;resources\ButtonStyles.xaml;resources\ListBoxItemStyles.xaml;resources\ListViewStyles.xaml;UserControls\Archiver.xaml;UserControls\Cleaner.xaml;UserControls\Encoder.xaml;UserControls\Groupper.xaml;UserControls\Renamer.xaml;
 
-False
+True
 

@@ -64,25 +64,42 @@
             <Grid x:Name="Left" Grid.Column="0">
                 <Polygon Fill="White" Opacity="0.2" Points="15, 15, 15, 465, 175, 465, 175, 15" />
 
-                <ListView Style="{StaticResource settVis}" Opacity="1" Margin="15">
+                <ListView x:Name="mainListView" SelectionChanged="mainListView_SelectionChanged" Style="{StaticResource settVis}" Opacity="1" Margin="15">
 
                     <StackPanel HorizontalAlignment="Center" VerticalAlignment="top" Margin="0, 50">
                         <TextBlock Text="Выберете пункт" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <TextBlock Foreground="Beige" Text="действия из" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         <TextBlock Foreground="Beige" Text="доступных:" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </StackPanel>
-                    <ListBoxItem Style="{StaticResource settLI}">Cleaner</ListBoxItem>
-                    <ListBoxItem Style="{StaticResource settLI}">Renamer</ListBoxItem>
-                    <ListBoxItem Style="{StaticResource settLI}">Archiver</ListBoxItem>
-                    <ListBoxItem Style="{StaticResource settLI}">Encoder/Decoder</ListBoxItem>
-                    <ListBoxItem Style="{StaticResource settLI}">Groupper</ListBoxItem>
+
+
+                    <ListBoxItem x:Name="lbiCleaner" Style="{StaticResource settLI}" IsSelected="{Binding IsCleanerSelected}">
+                        Cleaner
+                    </ListBoxItem>
+
+                    <ListBoxItem x:Name="lbiRenamer" Style="{DynamicResource settLI}" IsSelected="{Binding IsRenamerSelected}">
+                        Renamer
+                    </ListBoxItem>
+
+                    <ListBoxItem x:Name="lbiArchiver" Style="{StaticResource settLI}" IsSelected="{Binding IsRenamerSelected}">
+                        Archiver
+                    </ListBoxItem>
+                    
+                    <ListBoxItem x:Name="lbiEnDe" Style="{StaticResource settLI}" IsSelected="{Binding IsRenamerSelected}">
+                        Encoder/Decoder
+                    </ListBoxItem>
+
+                    <ListBoxItem x:Name="lbiGroupper" Style="{StaticResource settLI}" IsSelected="{Binding IsRenamerSelected}">
+                        Groupper
+                    </ListBoxItem>
                 </ListView>
 
             </Grid>
 
             <Grid x:Name="Right" Grid.Column="1">
-                <Button Style="{StaticResource settBtn}" Height="200" Width="200" Background="red" Click="openDirectory_Click"/>
-                <TextBox x:Name="t1" Width="300" Height="25" Margin="235,381,235,49" IsReadOnly="True"/>
+                
+
+                <ContentControl x:Name="ContentControl"/>
                 
             </Grid>
 

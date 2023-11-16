@@ -16,47 +16,47 @@ using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Security.Cryptography;
 using Gwl.Search;
+using FP_GWL.UserControls;
 
 namespace FP_GWL
 {
     public partial class MainWindow : Window
     {
-        private System.Windows.Forms.FolderBrowserDialog fbd;
-        private Finder finder;
-        private readonly string[] fileMasks =
-        {
-            "*.jpg",
-            "*.jpeg",
-            "*.png",
-            "*.gif"
-        };
-
-
-
         public MainWindow()
         {
             InitializeComponent();
 
-            fbd = new System.Windows.Forms.FolderBrowserDialog();
-
-            finder = new Finder(Finder.AnalyzerStrategy.RegexStrategy);
+            
         }
 
-        private void openDirectory_Click(object sender, RoutedEventArgs e)
+        private void mainListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            ContentControl.Content = null;
+
+            if (mainListView.SelectedItem != null)
             {
-                //MessageBox.Show(fbd.SelectedPath);
-                t1.Text = fbd.SelectedPath;
-                finder.FindFilesByMask(fbd.SelectedPath, fileMasks);
+                var selectedItem = (ListBoxItem)mainListView.SelectedItem;
+
+                switch (selectedItem.Name)
+                {
+                    case "lbiCleaner":
+                        ContentControl.Content = new Cleaner();
+                        break;
+                    case "lbiRenamer":
+                        ContentControl.Content = new Renamer();
+                        break;
+                    case "lbiArchiver":
+                        ContentControl.Content = new Renamer();
+                        break;
+                    case "lbiEnDe":
+                        ContentControl.Content = new Renamer();
+                        break;
+                    case "lbiGroupper":
+                        ContentControl.Content = new Renamer();
+                        break;
+                }
             }
-
         }
-
-
-
-
-
 
         private void btnCross_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -103,5 +103,7 @@ namespace FP_GWL
                 MessageBox.Show($"Ошибка при открытии ссылки: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        
     }
 }
