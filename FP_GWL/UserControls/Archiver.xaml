@@ -7,6 +7,63 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+
+
+        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="30, 30">
+            <CheckBox Content=".jpg" Name="cbxJpg"/>
+            <CheckBox Content=".jpeg" Name="cbxJpeg"/>
+            <CheckBox Content=".png" Name="cbxPng"/>
+            <CheckBox Content=".gif" Name="cbxGif"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="100,30,0,0">
+            <CheckBox Content=".doc" Name="cbxDoc"/>
+            <CheckBox Content=".docx" Name="cbxaDocx"/>
+            <CheckBox Content=".xls" Name="cbxXls"/>
+            <CheckBox Content=".xlsx" Name="cbxXlsx"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="170,30,0,0">
+            <CheckBox Content=".ppt" Name="cbxPpt"/>
+            <CheckBox Content=".pptx" Name="cbxPptx"/>
+            <CheckBox Content=".pdf" Name="cbxPdf"/>
+            <CheckBox Content=".txt" Name="cbxTxt"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="240,30,0,0">
+            <CheckBox Content=".mp3" Name="cbxMp3"/>
+            <CheckBox Content=".wav" Name="cbxWav"/>
+            <CheckBox Content=".mp4" Name="cbxMp4"/>
+            <CheckBox Content=".avi" Name="cbxAvi"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="310,30,0,0">
+            <CheckBox Content=".rar" Name="cbxRar"/>
+            <CheckBox Content=".zip" Name="cbxZip"/>
+            <CheckBox Content=".iso" Name="cbxIso"/>
+            <CheckBox Content=".html" Name="cbxHtmp"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="380,30,0,0">
+            <CheckBox Content=".psd" Name="cbxPsd"/>
+            <CheckBox Content=".torrent" Name="cbxTorrent"/>
+            <CheckBox Content=".cpp" Name="cbxCpp"/>
+            <CheckBox Content=".cs" Name="cbxCs"/>
+        </StackPanel>
+
+        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="450,30,0,0">
+            <CheckBox Content=".exe" Name="cbxExe"/>
+            <CheckBox Content=".tmp" Name="cbxTmp"/>
+            <CheckBox Content=".log" Name="cbxLog"/>
+            <CheckBox Content=".json" Name="cbxJson"/>
+        </StackPanel>
+
+
+        <Button Content="Save" Foreground="Black" Background="white" Height="20" Width="40" Click="SaveButton_Click"
+            Style="{StaticResource settBtn}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,150,0"
+        />
+        <Button Content="Browse" Foreground="Black" Click="openDirectory_Click" Background="white" Height="20" Width="60"
+            Style="{StaticResource settBtn}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="150,0,0,0"
+        />
     </Grid>
 </UserControl>

@@ -57,8 +57,9 @@ D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserContr
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Cleaner.baml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Renamer.baml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Archiver.g.cs
-D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Encoder.g.cs
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Groupper.g.cs
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Archiver.baml
-D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Encoder.baml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Groupper.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\EncDec.g.cs
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\EncDec.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\resources\TextBoxStyles.baml

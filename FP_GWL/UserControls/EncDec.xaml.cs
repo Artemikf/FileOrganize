@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace FP_GWL.UserControls
 {
     /// <summary>
-    /// Interaction logic for Encoder.xaml
+    /// Interaction logic for EncDec.xaml
     /// </summary>
-    public partial class Encoder : UserControl
+    public partial class EncDec : UserControl
     {
-        public Encoder()
+        public EncDec()
         {
             InitializeComponent();
         }

@@ -25,8 +25,6 @@ namespace FP_GWL
         public MainWindow()
         {
             InitializeComponent();
-
-            
         }
 
         private void mainListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -46,13 +44,15 @@ namespace FP_GWL
                         ContentControl.Content = new Renamer();
                         break;
                     case "lbiArchiver":
-                        ContentControl.Content = new Renamer();
+                        ContentControl.Content = new Archiver();
                         break;
                     case "lbiEnDe":
-                        ContentControl.Content = new Renamer();
+                        ContentControl.Content = new EncDec();
                         break;
                     case "lbiGroupper":
-                        ContentControl.Content = new Renamer();
+                        ContentControl.Content = new Groupper();
+                        break;
+                    default:
                         break;
                 }
             }

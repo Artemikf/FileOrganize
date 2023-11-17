@@ -13,7 +13,7 @@
     <Compile Update="UserControls\Cleaner.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserControls\Encoder.xaml.cs">
+    <Compile Update="UserControls\EncDec.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\Groupper.xaml.cs">
@@ -36,13 +36,16 @@
     <Page Update="resources\ListViewStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="resources\TextBoxStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UserControls\Archiver.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\Cleaner.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserControls\Encoder.xaml">
+    <Page Update="UserControls\EncDec.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\Groupper.xaml">

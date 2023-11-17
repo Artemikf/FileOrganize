@@ -97,10 +97,9 @@
             </Grid>
 
             <Grid x:Name="Right" Grid.Column="1">
-                
+                <Polygon Fill="White" Opacity="0.2" Points="15, 15, 15, 465, 740, 465, 740, 15" />
 
                 <ContentControl x:Name="ContentControl"/>
-                
             </Grid>
 
         </Grid>
