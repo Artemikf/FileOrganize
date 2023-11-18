@@ -63,3 +63,4 @@ D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserContr
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\EncDec.g.cs
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\EncDec.baml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\resources\TextBoxStyles.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\resources\CheckBoxStyles.baml

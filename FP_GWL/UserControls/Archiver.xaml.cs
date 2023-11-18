@@ -1,6 +1,7 @@
 ﻿using Gwl.Search;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,9 +22,9 @@ namespace FP_GWL.UserControls
         private System.Windows.Forms.FolderBrowserDialog fbd;
         private Finder finder;
 
-        private string[] fileMasks;
+        private string[]? fileMasks;
         
-        private List<string> selectedFileMasks = new List<string>();
+        private readonly List<string> selectedFileMasks = new List<string>(); // readonly
         private readonly Dictionary<string, string> checkBoxMappings = new Dictionary<string, string>
         {
             { "cbxJpg", "*.jpg" },
@@ -55,6 +56,7 @@ namespace FP_GWL.UserControls
             { "cbxLog", "*.log" },
             { "cbxJson", "*.json" }
         };
+        private readonly List<string> foundFiles = new List<string>(); // readonly
 
         public Archiver()
         {
@@ -67,11 +69,16 @@ namespace FP_GWL.UserControls
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            fileMasks = null;
+
+            foundFiles.Clear();
+            listBoxFiles.ItemsSource = null;
+
             List<string> selectedMasks = new List<string>();
 
             foreach (var mapping in checkBoxMappings)
             {
-                CheckBox checkBox = FindName(mapping.Key) as CheckBox;
+                CheckBox? checkBox = FindName(mapping.Key) as CheckBox;
 
                 if (checkBox != null && checkBox.IsChecked == true)
                     selectedMasks.Add(mapping.Value);
@@ -80,12 +87,55 @@ namespace FP_GWL.UserControls
             fileMasks = selectedMasks.ToArray();
         }
 
+        private void UpdateFileList()
+        {
+            foundFiles.Clear();
+
+            foreach (var fileInfo in finder.Container.Files)
+            {
+                foundFiles.Add(fileInfo.FullName);
+            }
+            listBoxFiles.ItemsSource = foundFiles;
+        }
+
         private void openDirectory_Click(object sender, RoutedEventArgs e)
         {
-            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            try 
             {
-                finder.FindFilesByMask(fbd.SelectedPath, fileMasks);
+                if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    foundFiles.Clear();
+
+                    finder.FindFilesByMask(fbd.SelectedPath, fileMasks);
+
+                    UpdateFileList();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка!\nВыберете сначала расширения файлов!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void clearAll_Click(object sender, RoutedEventArgs e)
+        {
+            foreach (var checkBox in checkBoxMappings.Keys)
+            {
+                CheckBox? cb = FindName(checkBox) as CheckBox;
+                if (cb != null)
+                {
+                    cb.IsChecked = false;
+                }
+            }
+
+            fileMasks = null;
+
+            foundFiles.Clear();
+
+            listBoxFiles.ItemsSource = null;
+        }
+
+
+
     }
 }

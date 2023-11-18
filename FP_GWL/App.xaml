@@ -10,6 +10,7 @@
                 <ResourceDictionary Source="resources/ListViewStyles.xaml" />
                 <ResourceDictionary Source="resources/ButtonStyles.xaml" />
                 <ResourceDictionary Source="resources/TextBoxStyles.xaml" />
+                <ResourceDictionary Source="resources/CheckBoxStyles.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>         
     </Application.Resources>

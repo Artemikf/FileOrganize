@@ -9,61 +9,78 @@
     <Grid>
 
 
-        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="30, 30">
-            <CheckBox Content=".jpg" Name="cbxJpg"/>
-            <CheckBox Content=".jpeg" Name="cbxJpeg"/>
-            <CheckBox Content=".png" Name="cbxPng"/>
-            <CheckBox Content=".gif" Name="cbxGif"/>
-        </StackPanel>
+        <UniformGrid Columns="7" Rows="4" VerticalAlignment="Top" Margin="30">
+            <!-- Чекбоксы для изображений -->
+            <CheckBox Content=".jpg" Name="cbxJpg" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".jpeg" Name="cbxJpeg" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".png" Name="cbxPng" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".gif" Name="cbxGif" Style="{StaticResource setChb}"/>
 
-        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="100,30,0,0">
-            <CheckBox Content=".doc" Name="cbxDoc"/>
-            <CheckBox Content=".docx" Name="cbxaDocx"/>
-            <CheckBox Content=".xls" Name="cbxXls"/>
-            <CheckBox Content=".xlsx" Name="cbxXlsx"/>
-        </StackPanel>
+            <!-- Чекбоксы для документов -->
+            <CheckBox Content=".doc" Name="cbxDoc" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".docx" Name="cbxaDocx" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".xls" Name="cbxXls" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".xlsx" Name="cbxXlsx" Style="{StaticResource setChb}"/>
 
-        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="170,30,0,0">
-            <CheckBox Content=".ppt" Name="cbxPpt"/>
-            <CheckBox Content=".pptx" Name="cbxPptx"/>
-            <CheckBox Content=".pdf" Name="cbxPdf"/>
-            <CheckBox Content=".txt" Name="cbxTxt"/>
-        </StackPanel>
+            <!-- Чекбоксы для презентаций и текстовых файлов -->
+            <CheckBox Content=".ppt" Name="cbxPpt" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".pptx" Name="cbxPptx" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".pdf" Name="cbxPdf" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".txt" Name="cbxTxt" Style="{StaticResource setChb}"/>
 
-        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="240,30,0,0">
-            <CheckBox Content=".mp3" Name="cbxMp3"/>
-            <CheckBox Content=".wav" Name="cbxWav"/>
-            <CheckBox Content=".mp4" Name="cbxMp4"/>
-            <CheckBox Content=".avi" Name="cbxAvi"/>
-        </StackPanel>
+            <!-- Чекбоксы для медиафайлов -->
+            <CheckBox Content=".mp3" Name="cbxMp3" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".wav" Name="cbxWav" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".mp4" Name="cbxMp4" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".avi" Name="cbxAvi" Style="{StaticResource setChb}"/>
 
-        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="310,30,0,0">
-            <CheckBox Content=".rar" Name="cbxRar"/>
-            <CheckBox Content=".zip" Name="cbxZip"/>
-            <CheckBox Content=".iso" Name="cbxIso"/>
-            <CheckBox Content=".html" Name="cbxHtmp"/>
-        </StackPanel>
+            <!-- Чекбоксы для архивов -->
+            <CheckBox Content=".rar" Name="cbxRar" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".zip" Name="cbxZip" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".iso" Name="cbxIso" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".html" Name="cbxHtmp" Style="{StaticResource setChb}"/>
 
-        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="380,30,0,0">
-            <CheckBox Content=".psd" Name="cbxPsd"/>
-            <CheckBox Content=".torrent" Name="cbxTorrent"/>
-            <CheckBox Content=".cpp" Name="cbxCpp"/>
-            <CheckBox Content=".cs" Name="cbxCs"/>
-        </StackPanel>
+            <!-- Чекбоксы для графических файлов -->
+            <CheckBox Content=".psd" Name="cbxPsd" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".torrent" Name="cbxTorrent" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".cpp" Name="cbxCpp" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".cs" Name="cbxCs" Style="{StaticResource setChb}"/>
 
-        <StackPanel VerticalAlignment="Top" Orientation="Vertical" Margin="450,30,0,0">
-            <CheckBox Content=".exe" Name="cbxExe"/>
-            <CheckBox Content=".tmp" Name="cbxTmp"/>
-            <CheckBox Content=".log" Name="cbxLog"/>
-            <CheckBox Content=".json" Name="cbxJson"/>
-        </StackPanel>
+            <!-- Чекбоксы для исполняемых файлов -->
+            <CheckBox Content=".exe" Name="cbxExe" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".tmp" Name="cbxTmp" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".log" Name="cbxLog" Style="{StaticResource setChb}"/>
+            <CheckBox Content=".json" Name="cbxJson" Style="{StaticResource setChb}"/>
+        </UniformGrid>
+
+        <Button Foreground="Black" Background="white" Height="20" Width="40" Click="SaveButton_Click" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+            Style="{StaticResource settBtn}" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="305,125,0,0">
+            <TextBlock Text="Save" Padding="2,0"/>
+        </Button>
+
+        <Button Foreground="Black" Click="openDirectory_Click" Background="white" Height="20" Width="60" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+            Style="{StaticResource settBtn}" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="445,125,0,0" >
+                <TextBlock Text="Browse" Padding="2,0"/>
+        </Button>
+
+        <Button Foreground="Black" Click="clearAll_Click" Background="white" Height="20" Width="60" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+            Style="{StaticResource settBtn}" FontSize="16" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="165,125,0,0" >
+                <TextBlock Text="Clear" Padding="11,0"/>
+        </Button>
+
+        
+        <ListBox x:Name="listBoxFiles" Height="225" Width="685" Margin="50,155,65,70"/>
 
 
-        <Button Content="Save" Foreground="Black" Background="white" Height="20" Width="40" Click="SaveButton_Click"
-            Style="{StaticResource settBtn}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,150,0"
-        />
-        <Button Content="Browse" Foreground="Black" Click="openDirectory_Click" Background="white" Height="20" Width="60"
-            Style="{StaticResource settBtn}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="150,0,0,0"
-        />
+        <Button Foreground="Black" Background="RosyBrown" Margin="215,410,0,0" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+        Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock Text="To ZIP" Padding="5,0" />
+        </Button>
+
+        <Button Foreground="Black" Background="RosyBrown" Margin="430,410,0,0" Width="85" 
+            Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" >
+            <TextBlock Text="To RAR" Padding="5,0"/>
+        </Button>
+
     </Grid>
 </UserControl>

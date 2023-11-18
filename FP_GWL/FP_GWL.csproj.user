@@ -30,6 +30,9 @@
     <Page Update="resources\ButtonStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="resources\CheckBoxStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="resources\ListBoxItemStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
