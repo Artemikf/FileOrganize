@@ -17,6 +17,7 @@ using System.Diagnostics;
 using System.Security.Cryptography;
 using Gwl.Search;
 using FP_GWL.UserControls;
+using Gwl.DataCleaner;
 
 namespace FP_GWL
 {
@@ -38,7 +39,7 @@ namespace FP_GWL
                 switch (selectedItem.Name)
                 {
                     case "lbiCleaner":
-                        ContentControl.Content = new Cleaner();
+                        ContentControl.Content = new Cleaner(new MainCleaner());
                         break;
                     case "lbiRenamer":
                         ContentControl.Content = new Renamer();
