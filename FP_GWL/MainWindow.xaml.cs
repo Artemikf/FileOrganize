@@ -18,6 +18,7 @@ using System.Security.Cryptography;
 using Gwl.Search;
 using FP_GWL.UserControls;
 using Gwl.DataCleaner;
+using Gwl.FilesArchiver;
 
 namespace FP_GWL
 {
@@ -45,7 +46,7 @@ namespace FP_GWL
                         ContentControl.Content = new Renamer();
                         break;
                     case "lbiArchiver":
-                        ContentControl.Content = new Archiver();
+                        ContentControl.Content = new Archiver(new MainArchiver());
                         break;
                     case "lbiEnDe":
                         ContentControl.Content = new EncDec();

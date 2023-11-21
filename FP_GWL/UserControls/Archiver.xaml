@@ -72,13 +72,13 @@
         <ListBox x:Name="listBoxFiles" Height="225" Width="685" Margin="50,155,65,70"/>
 
 
-        <Button Foreground="Black" Background="RosyBrown" Margin="215,410,0,0" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
-        Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left">
+        <Button x:Name="btnToZip" Foreground="Black" Background="RosyBrown" Margin="215,410,0,0" Width="80" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnToZip_Click"> 
             <TextBlock Text="To ZIP" Padding="5,0" />
         </Button>
 
         <Button Foreground="Black" Background="RosyBrown" Margin="430,410,0,0" Width="85" 
-            Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" >
+Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" >
             <TextBlock Text="To RAR" Padding="5,0"/>
         </Button>
 

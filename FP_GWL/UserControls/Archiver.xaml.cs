@@ -1,4 +1,5 @@
-﻿using Gwl.Search;
+﻿using Gwl.FilesArchiver;
+using Gwl.Search;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -58,13 +59,16 @@ namespace FP_GWL.UserControls
         };
         private readonly List<string> foundFiles = new List<string>(); // readonly
 
-        public Archiver()
+        private readonly MainArchiver archiver;
+
+        public Archiver(MainArchiver archiver)
         {
             InitializeComponent();
 
             fbd = new System.Windows.Forms.FolderBrowserDialog();
 
             finder = new Finder(Finder.AnalyzerStrategy.RegexStrategy);
+            this.archiver = archiver;
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
@@ -135,7 +139,23 @@ namespace FP_GWL.UserControls
             listBoxFiles.ItemsSource = null;
         }
 
+        private void btnToZip_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                ArchiveButton_Click(fbd.SelectedPath, fileMasks);
+                MessageBox.Show("Все успешно архивированно!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Укажите директорию и выберите расширения файлов!", " ", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
 
-
+        public void ArchiveButton_Click(string rootPath, string[] fileMasks)
+        {
+            archiver.ArchiveFiles(rootPath, fileMasks);
+            UpdateFileList();
+        }
     }
 }

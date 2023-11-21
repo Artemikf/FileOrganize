@@ -14,7 +14,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Gwl.Search;
 using FP_GWL.UserControls;
 
 namespace FP_GWL.UserControls

@@ -8,12 +8,21 @@
     ".NETCoreApp,Version=v7.0": {
       "FP_GWL/1.0.0": {
         "dependencies": {
+          "SharpZipLib": "1.4.2",
           "Gwl": "1.0.0.0",
           "System.Drawing.Common": "7.0.0.0",
           "System.Windows.Forms": "7.0.0.0"
         },
         "runtime": {
           "FP_GWL.dll": {}
+        }
+      },
+      "SharpZipLib/1.4.2": {
+        "runtime": {
+          "lib/net6.0/ICSharpCode.SharpZipLib.dll": {
+            "assemblyVersion": "1.4.2.13",
+            "fileVersion": "1.4.2.13"
+          }
         }
       },
       "Gwl/1.0.0.0": {
@@ -55,6 +64,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "SharpZipLib/1.4.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yjj+3zgz8zgXpiiC3ZdF/iyTBbz2fFvMxZFEBPUcwZjIvXOf37Ylm+K58hqMfIBt5JgU/Z2uoUS67JmTLe973A==",
+      "path": "sharpziplib/1.4.2",
+      "hashPath": "sharpziplib.1.4.2.nupkg.sha512"
     },
     "Gwl/1.0.0.0": {
       "type": "reference",

@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "InNRl0MLU6df0Pk/zSKc6okcy8C5Nsn2AMnR8nKN3fSdF3JyMATic4LgY3KcnXNnVVZzgcFNHKTi7/vckstcSw==",
+  "dgSpecHash": "oUfkRkMpvdqNPyBBjzDBSa7fviPl0vpQAI0QF1bLVTeJVmSXfOWlQrFmhUnjkZ6XIroERrqDEe78+PXwsfPZTg==",
   "success": true,
   "projectFilePath": "D:\\Programming\\C#\\WPF\\Final_project\\fp\\FP_GWL\\FP_GWL.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Artem\\.nuget\\packages\\sharpziplib\\1.4.2\\sharpziplib.1.4.2.nupkg.sha512"
+  ],
   "logs": []
 }

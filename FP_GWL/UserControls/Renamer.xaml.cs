@@ -20,15 +20,44 @@ namespace FP_GWL.UserControls
 {
     public partial class  Renamer: UserControl
     {
-        private System.Windows.Forms.FolderBrowserDialog fbd;
-        private Finder finder;
-        private readonly string[] fileMasks =
+        private readonly System.Windows.Forms.FolderBrowserDialog fbd;
+        private readonly Finder finder;
+
+        private string[]? fileMasks;
+
+        private readonly List<string> selectedFileMasks = new List<string>(); // readonly
+        private readonly Dictionary<string, string> checkBoxMappings = new Dictionary<string, string>
         {
-            "*.jpg",
-            "*.jpeg",
-            "*.png",
-            "*.gif"
+            { "cbxJpg", "*.jpg" },
+            { "cbxJpeg", "*.jpeg" },
+            { "cbxPng", "*.png" },
+            { "cbxGif", "*.gif" },
+            { "cbxDoc", "*.doc" },
+            { "cbxaDocx", "*.docx" },
+            { "cbxXls", "*.xls" },
+            { "cbxXlsx", "*.xlsx" },
+            { "cbxPpt", "*.ppt" },
+            { "cbxPptx", "*.pptx" },
+            { "cbxPdf", "*.pdf" },
+            { "cbxTxt", "*.txt" },
+            { "cbxMp3", "*.mp3" },
+            { "cbxWav", "*.wav" },
+            { "cbxMp4", "*.mp4" },
+            { "cbxAvi", "*.avi" },
+            { "cbxRar", "*.rar" },
+            { "cbxZip", "*.zip" },
+            { "cbxIso", "*.iso" },
+            { "cbxHtmp", "*.html" },
+            { "cbxPsd", "*.psd" },
+            { "cbxTorrent", "*.torrent" },
+            { "cbxCpp", "*.cpp" },
+            { "cbxCs", "*.cs" },
+            { "cbxExe", "*.exe" },
+            { "cbxTmp", "*.tmp" },
+            { "cbxLog", "*.log" },
+            { "cbxJson", "*.json" }
         };
+        private readonly List<string> foundFiles = new List<string>(); // readonly
 
 
         public Renamer()
@@ -40,15 +69,80 @@ namespace FP_GWL.UserControls
             finder = new Finder(Finder.AnalyzerStrategy.RegexStrategy);
         }
 
-        private void openDirectory_Click(object sender, RoutedEventArgs e)
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            fileMasks = null;
+
+            foundFiles.Clear();
+            listBoxFiles.ItemsSource = null;
+
+            List<string> selectedMasks = new List<string>();
+
+            foreach (var mapping in checkBoxMappings)
             {
-                //MessageBox.Show(fbd.SelectedPath);
-                t1.Text = fbd.SelectedPath;
-                finder.FindFilesByMask(fbd.SelectedPath, fileMasks);
+                CheckBox? checkBox = FindName(mapping.Key) as CheckBox;
+
+                if (checkBox != null && checkBox.IsChecked == true)
+                    selectedMasks.Add(mapping.Value);
             }
 
+            fileMasks = selectedMasks.ToArray();
+        }
+
+        private void UpdateFileList()
+        {
+            foundFiles.Clear();
+
+            foreach (var fileInfo in finder.Container.Files)
+            {
+                foundFiles.Add(fileInfo.FullName);
+            }
+            listBoxFiles.ItemsSource = foundFiles;
+        }
+
+        private void openDirectory_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (fbd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    foundFiles.Clear();
+
+                    finder.FindFilesByMask(fbd.SelectedPath, fileMasks);
+
+                    UpdateFileList();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка!\nВыберете сначала расширения файлов!", "Ошибка!", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void clearListbox_Click(object sender, RoutedEventArgs e)
+        {
+            clearMainWindow();
+        }
+
+
+
+
+        private void clearMainWindow()
+        {
+            foreach (var checkBox in checkBoxMappings.Keys)
+            {
+                CheckBox? cb = FindName(checkBox) as CheckBox;
+                if (cb != null)
+                {
+                    cb.IsChecked = false;
+                }
+            }
+
+            fileMasks = null;
+
+            foundFiles.Clear();
+
+            listBoxFiles.ItemsSource = null;
         }
     }
 }
