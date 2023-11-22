@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FP_GWL.UserControls.UserControlsEncoderDecoder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +16,27 @@ using System.Windows.Shapes;
 
 namespace FP_GWL.UserControls
 {
-    /// <summary>
-    /// Interaction logic for EncDec.xaml
-    /// </summary>
     public partial class EncDec : UserControl
     {
         public EncDec()
         {
             InitializeComponent();
+        }
+
+        private void btnBinaryEnDe_Click(object sender, RoutedEventArgs e)
+        {
+            ContentControlEncDec.Content = null;
+
+            if (sender == btnBinaryEn)
+            {
+                ContentControlEncDec.Content = new ucBinaryEncoder(this); 
+            }
+            else if (sender == btnBinaryDe)
+            {
+                ContentControlEncDec.Content = new ucBinaryDecoder(this);
+            }
+
+
         }
     }
 }

@@ -65,3 +65,7 @@ D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\refint\FP
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL.pdb
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL.genruntimeconfig.cache
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\ref\FP_GWL.dll
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\UserControlsEncoderDecoder\ucBinaryDecoder.g.cs
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\UserControlsEncoderDecoder\ucBinaryEncoder.g.cs
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\UserControlsEncoderDecoder\ucBinaryDecoder.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\UserControlsEncoderDecoder\ucBinaryEncoder.baml

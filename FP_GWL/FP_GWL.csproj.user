@@ -22,6 +22,12 @@
     <Compile Update="UserControls\ucRenamer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\UserControlsEncoderDecoder\ucBinaryDecoder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserControls\UserControlsEncoderDecoder\ucBinaryEncoder.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -55,6 +61,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserControls\ucRenamer.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\UserControlsEncoderDecoder\ucBinaryDecoder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserControls\UserControlsEncoderDecoder\ucBinaryEncoder.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

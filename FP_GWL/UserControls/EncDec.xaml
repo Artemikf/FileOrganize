@@ -7,7 +7,38 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Button Width="200" Height="200" Background="Green"/>
+        <Button x:Name="btnBinaryEn" Foreground="Black" Background="LightPink" Margin="70,150,0,0" Width="180" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnBinaryEnDe_Click">
+            <TextBlock Text="Binary Encoder" Padding="13,0" />
+        </Button>
+        
+        <Button x:Name="btnBinaryDe" Foreground="Black" Background="LightGreen" Margin="500,150,0,0" Width="180" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnBinaryEnDe_Click">
+            <TextBlock Text="Binary Decoder" Padding="13,0" />
+        </Button>
+        
+        <!--<Button x:Name="btnBinary2En" Foreground="Black" Background="RosyBrown" Margin="70,200,0,0" Width="180" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock Text="Binary Encoder" Padding="13,0" />
+        </Button>
+
+        <Button x:Name="btnBinary2De" Foreground="Black" Background="LightGreen" Margin="500,200,0,0" Width="180" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock Text="Binary Encoder" Padding="13,0" />
+        </Button>
+
+        <Button x:Name="btnBinary3En" Foreground="Black" Background="RosyBrown" Margin="70,250,0,0" Width="180" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock Text="Binary Encoder" Padding="13,0" />
+        </Button>
+
+        <Button x:Name="btnBinary3De" Foreground="Black" Background="LightGreen" Margin="500,250,0,0" Width="180" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left">
+            <TextBlock Text="Binary Encoder" Padding="13,0" />
+        </Button>-->
+
+
+        <ContentControl x:Name="ContentControlEncDec"/>
 
     </Grid>
 </UserControl>
