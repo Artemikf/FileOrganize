@@ -24,6 +24,7 @@ D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\FP_GWL.de
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\FP_GWL.runtimeconfig.json
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\FP_GWL.dll
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\FP_GWL.pdb
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\ICSharpCode.SharpZipLib.dll
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\Gwl.dll
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\System.Drawing.Common.dll
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\System.Windows.Forms.dll
@@ -42,7 +43,7 @@ D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserContr
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Cleaner.g.cs
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\EncDec.g.cs
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Groupper.g.cs
-D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Renamer.g.cs
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\ucRenamer.g.cs
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\App.g.cs
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL_MarkupCompile.cache
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL_MarkupCompile.lref
@@ -52,7 +53,7 @@ D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserContr
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Cleaner.baml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\EncDec.baml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Groupper.baml
-D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\Renamer.baml
+D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\UserControls\ucRenamer.baml
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL.g.resources
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL.GeneratedMSBuildEditorConfig.editorconfig
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL.AssemblyInfoInputs.cache
@@ -64,4 +65,3 @@ D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\refint\FP
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL.pdb
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\FP_GWL.genruntimeconfig.cache
 D:\Programming\C#\WPF\Final_project\fp\FP_GWL\obj\Debug\net7.0-windows\ref\FP_GWL.dll
-D:\Programming\C#\WPF\Final_project\fp\FP_GWL\bin\Debug\net7.0-windows\ICSharpCode.SharpZipLib.dll

@@ -15,10 +15,11 @@ using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Security.Cryptography;
-using Gwl.Search;
 using FP_GWL.UserControls;
+using Gwl.Search;
 using Gwl.DataCleaner;
 using Gwl.FilesArchiver;
+using Gwl.Rename;
 
 namespace FP_GWL
 {
@@ -43,7 +44,7 @@ namespace FP_GWL
                         ContentControl.Content = new Cleaner(new MainCleaner());
                         break;
                     case "lbiRenamer":
-                        ContentControl.Content = new Renamer();
+                        ContentControl.Content = new ucRenamer();
                         break;
                     case "lbiArchiver":
                         ContentControl.Content = new Archiver(new MainArchiver());

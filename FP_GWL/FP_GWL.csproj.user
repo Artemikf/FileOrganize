@@ -19,7 +19,7 @@
     <Compile Update="UserControls\Groupper.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserControls\Renamer.xaml.cs">
+    <Compile Update="UserControls\ucRenamer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -54,7 +54,7 @@
     <Page Update="UserControls\Groupper.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserControls\Renamer.xaml">
+    <Page Update="UserControls\ucRenamer.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

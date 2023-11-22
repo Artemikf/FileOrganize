@@ -1,4 +1,5 @@
-﻿using Gwl.Search;
+﻿using Gwl.Rename;
+using Gwl.Search;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,12 +14,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Gwl.Search;
-using FP_GWL.UserControls;
 
 namespace FP_GWL.UserControls
 {
-    public partial class  Renamer: UserControl
+    public partial class ucRenamer : UserControl
     {
         private readonly System.Windows.Forms.FolderBrowserDialog fbd;
         private readonly Finder finder;
@@ -60,7 +59,7 @@ namespace FP_GWL.UserControls
         private readonly List<string> foundFiles = new List<string>(); // readonly
 
 
-        public Renamer()
+        public ucRenamer()
         {
             InitializeComponent();
 
@@ -124,9 +123,6 @@ namespace FP_GWL.UserControls
             clearMainWindow();
         }
 
-
-
-
         private void clearMainWindow()
         {
             foreach (var checkBox in checkBoxMappings.Keys)
@@ -144,5 +140,20 @@ namespace FP_GWL.UserControls
 
             listBoxFiles.ItemsSource = null;
         }
+
+        private void btnRenameFiles_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                //RenameFiles("<uuid>_<filename>");
+
+                MessageBox.Show("Все успешно переименовано!", "Успешно!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Произошла ошибка: {ex.Message}", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
     }
 }

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="FP_GWL.UserControls.Renamer"
+﻿<UserControl x:Class="FP_GWL.UserControls.ucRenamer"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -70,5 +70,11 @@ Style="{StaticResource settBtn}" FontSize="16" VerticalAlignment="Top" Horizonta
 
         <ListBox x:Name="listBoxFiles" Height="225" Width="685" Margin="50,155,65,70"/>
 
+        <Button x:Name="btnRename" Foreground="Black" Background="RosyBrown" Margin="320,410,0,0" Width="110" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+Style="{StaticResource settBtn}" FontSize="22" VerticalAlignment="Top" HorizontalAlignment="Left" Click="btnRenameFiles_Click">
+            <TextBlock Text="Rename" Padding="13,0" />
+        </Button>
+
     </Grid>
 </UserControl>
+
