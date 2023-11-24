@@ -20,6 +20,7 @@ using Gwl.Search;
 using Gwl.DataCleaner;
 using Gwl.FilesArchiver;
 using Gwl.Rename;
+using Gwl.FilesGroupper;
 
 namespace FP_GWL
 {
@@ -53,7 +54,7 @@ namespace FP_GWL
                         ContentControl.Content = new EncDec();
                         break;
                     case "lbiGroupper":
-                        ContentControl.Content = new Groupper();
+                        ContentControl.Content = new Groupper(new MainGroupper());
                         break;
                     default:
                         break;
